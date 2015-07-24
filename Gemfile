@@ -23,6 +23,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# User accounts
+gem 'devise'
+
 # Materialize (google material design)
 gem 'materialize-sass'
 
