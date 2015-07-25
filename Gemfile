@@ -26,6 +26,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # User accounts
 gem 'devise'
 
+# Social network login
+gem 'omniauth-facebook'
+gem 'omniauth-google'
+gem 'omniauth-twitter'
+
 # Materialize (google material design)
 gem 'materialize-sass'
 
