@@ -1,57 +1,61 @@
+<div class="property-header">
+  <div class="parallax-container">
+    <div class="parallax"><img src="<%= @property.image_urls.split('|||')[0] %>"></div>
+  </div>
+  <a class="map" href="#">Map <%= @property.lat %>, <%= @property.lon %></a>
+  <a class="price" href="#"><%= @property.price_per_night %></a>
+</div><!-- end .property_header -->
 
 <div class="container">
-<p id="notice"><%= notice %></p>
 
-<div class="parallax-container">
-  <div class="parallax"><img src="<%= @property.image_urls.split('|||')[0] %>"></div>
-</div>
+  <p id="notice"><%= notice %></p>
 
-</div>
+  <div class="row">
 
-<p>
-  <strong>Name:</strong>
-  <%= @property.name %>
-</p>
+    <div class="col s8">
+      <h1>
+        <%= @property.name %>
+        <small>
+          in <%= link_to @property.community.name, @property.community %>
+        </small>
+      </h1>
+      <%= @property.description %>
+      <h2>Terms</h2>
+      <%= @property.terms %>
+    </div><!-- end .s8 -->
 
-<p>
-  <strong>Description:</strong>
-  <%= @property.description %>
-</p>
+    <div class="col s4">
+      <form action="#">
+        <h2>Stay here</h2>
 
-<p>
-  <strong>Lat:</strong>
-  <%= @property.lat %>
-</p>
+        <input type="text" name="from" placeholder="From">
+        <input type="text" name="to" placeholder="To">
 
-<p>
-  <strong>Lon:</strong>
-  <%= @property.lon %>
-</p>
+        <div class="collection">
+          <div class="collection-item">
+            Price per night 
+            <span class="badge"><%= @property.price_per_night %>
+          </div>
+          <div class="collection-item">
+            Length of your stay
+            <span id="legth-of-stay" class="badge">1</span>
+          </div>
+          <div class="collection-item">
+            Total
+            <span id="total_price" class="badge"><%= @property.price_per_night %></span>
+          </div>
+        </div>
 
-<p>
-  <strong>Image urls:</strong>
-  <%= @property.image_urls %>
-</p>
+          <button class="waves-effect waves-light btn-large" type="submit">Send request</button>
+          <a class="waves-effect waves-light btn-large" href="#">Ask host</a>
+        
+    </div><!-- end .s4 -->
+  </div><!-- .end .row -->
+  
 
-<p>
-  <strong>Price per night:</strong>
-  <%= @property.price_per_night %>
-</p>
+</div><!-- end .container -->
 
-<p>
-  <strong>Terms:</strong>
-  <%= @property.terms %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @property.user %>
-</p>
-
-<p>
-  <strong>Community:</strong>
-  <%= @property.community %>
-</p>
-
-<%= link_to 'Edit', edit_property_path(@property) %> |
-<%= link_to 'Back', properties_path %>
+<!--
+  <%= link_to 'Edit', edit_property_path(@property) %> |
+  <%= link_to 'Back', properties_path %>
+-->
