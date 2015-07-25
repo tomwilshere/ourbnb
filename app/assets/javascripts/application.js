@@ -14,3 +14,40 @@
 //= require materialize-sprockets
 //= require turbolinks
 //= require_tree .
+$(document).ready(function (){
+$('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15 // Creates a dropdown of 15 years to control year
+  });
+
+$('select').material_select();
+
+
+	var widthCheck = function() {
+
+	  var $window = $(window);
+	  var w = $window.width();
+	  var h = $window.height();
+
+		  if (w <= 580) {
+
+		  } else {
+		  	// $('.secondary-nav').addClass('non-mobile');
+	        var windowsize = $window.height();
+	        var footerHeight = $('footer').outerHeight();
+	        var top = $('.site-header').outerHeight();
+	        var remainHeight = parseInt('22');
+	        $('.welcome-banner').css({"height": $window.height(), "width": $window.width() });
+	        $('body').css('overflow','hidden');
+
+		    // Execute on load
+		    // Bind event listener
+
+		  }
+
+	};
+
+	widthCheck();
+
+
+});

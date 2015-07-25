@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="container">
 <h1>Places to visit in Snowdonia</h1>
 <div class="row">
 <% @properties.each do |property| %>
@@ -39,7 +39,7 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
 <%= link_to 'New Property', new_property_path %>
