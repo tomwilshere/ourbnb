@@ -1,14 +1,10 @@
-<div class="property-header">
-  <div class="parallax-container">
-    <div class="parallax"><img src="<%= @property.image_urls.split('|||')[0] %>"></div>
-  </div>
-  <a class="map" href="#">Map <%= @property.lat %>, <%= @property.lon %></a>
-  <a class="price" href="#"><%= @property.price_per_night %></a>
-</div><!-- end .property_header -->
-
 <div class="container">
-
   <p id="notice"><%= notice %></p>
+  <div class="row">
+    <div class="col s12">
+      <img class="responsive-img property-img" src="<%= @property.image_urls.split('|||')[0] %>">
+    </div>
+
 
   <div class="row">
 
@@ -20,8 +16,8 @@
         </small>
       </h1>
       <%= @property.description %>
-      <h2>Terms</h2>
-      <%= @property.terms %>
+<!--       <h2>Terms</h2>
+      <%= @property.terms %> -->
     </div><!-- end .s8 -->
 
     <div class="col s4">
