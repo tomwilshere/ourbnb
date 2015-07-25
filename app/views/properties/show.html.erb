@@ -1,7 +1,12 @@
 
-<section id="main-gallery">
-  <article class="image"><img src="" alt="test image"></article>
-</section>
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<div class="parallax-container">
+  <div class="parallax"><img src="<%= @property.image_urls.split('|||')[0] %>"></div>
+</div>
+
+</div>
 
 <p>
   <strong>Name:</strong>
