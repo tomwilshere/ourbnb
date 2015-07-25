@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @property.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @property.description %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @property.lat %>
+</p>
+
+<p>
+  <strong>Lon:</strong>
+  <%= @property.lon %>
+</p>
+
+<p>
+  <strong>Image urls:</strong>
+  <%= @property.image_urls %>
+</p>
+
+<p>
+  <strong>Price per night:</strong>
+  <%= @property.price_per_night %>
+</p>
+
+<p>
+  <strong>Terms:</strong>
+  <%= @property.terms %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @property.user %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @property.community %>
+</p>
+
+<%= link_to 'Edit', edit_property_path(@property) %> |
+<%= link_to 'Back', properties_path %>

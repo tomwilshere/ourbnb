@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  lat: MyString
+  lon: MyString
+  image_urls: MyString
+  price_per_night: 9.99
+  terms: MyText
+  user_id: 
+  community_id: 
+
+two:
+  name: MyString
+  description: MyText
+  lat: MyString
+  lon: MyString
+  image_urls: MyString
+  price_per_night: 9.99
+  terms: MyText
+  user_id: 
+  community_id: 
