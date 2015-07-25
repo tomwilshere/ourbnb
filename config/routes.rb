@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :bookings
+  resources :communities
+  resources :properties
   resources :things
   resources :logged_ins
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }

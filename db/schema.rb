@@ -11,10 +11,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150724171949) do
+ActiveRecord::Schema.define(version: 20150725101419) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer  "property_id"
+    t.integer  "user_id"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.text     "notes"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "bookings", ["property_id"], name: "index_bookings_on_property_id", using: :btree
+  add_index "bookings", ["user_id"], name: "index_bookings_on_user_id", using: :btree
+
+  create_table "communities", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "image_url"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "properties", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "lat"
+    t.string   "lon"
+    t.string   "image_urls"
+    t.decimal  "price_per_night"
+    t.text     "terms"
+    t.integer  "user_id"
+    t.integer  "community_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "properties", ["community_id"], name: "index_properties_on_community_id", using: :btree
+  add_index "properties", ["user_id"], name: "index_properties_on_user_id", using: :btree
 
   create_table "things", force: :cascade do |t|
     t.string   "name"
@@ -44,4 +82,8 @@ ActiveRecord::Schema.define(version: 20150724171949) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "bookings", "properties"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "properties", "communities"
+  add_foreign_key "properties", "users"
 end
