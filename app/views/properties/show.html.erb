@@ -41,9 +41,24 @@
             <span id="total_price" class="badge"><%= @property.price_per_night %></span>
           </div>
         </div>
+<a class="waves-effect waves-light btn-large modal-trigger" href="#modal1">Send request</a>
+<a class="waves-effect waves-light btn-large modal-trigger-2" href="#modal2">Ask host</a>
 
-          <button class="waves-effect waves-light btn-large" type="submit">Send request</button>
-          <a class="waves-effect waves-light btn-large" href="#">Ask host</a>
+<!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>request sent</h4>
+      <p>A bunch of text</p>
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <h4>askinh host</h4>
+      <p>A bunch of text</p>
+    </div>
+  </div>
         
     </div><!-- end .s4 -->
   </div><!-- .end .row -->
