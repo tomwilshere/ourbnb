@@ -1,2 +1,10 @@
 @import "materialize";
 @import "welcome";
+
+.brand-logo {
+	font-family: 'Pacifico', cursive;
+}
+
+#map-canvas {
+	height: 600px;
+}
