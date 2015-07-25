@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-    <title>Ourbnb</title>
+    <title>Hearth</title>
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
     <%= csrf_meta_tags %>
   </head>
-  <body>
-    <nav class="light-blue lighten-1" role="navigation">
+  <body class="<%= page %>" id="<%= body_id %>">
+    <nav class="nav light-blue lighten-1" role="navigation">
       <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">OurBnB</a>
       <ul class="right hide-on-med-and-down">
         <li><%= link_to('Things', things_path) %></li>
@@ -32,7 +35,7 @@
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-  <div>
+  <div class="wrap">
     <%= yield %>
   </div>
   <footer class="page-footer orange" style="display: none;">
@@ -68,5 +71,6 @@
       </div>
     </div>
   </footer>
+  <script src="http://www.seanmccambridge.com/tubular/js/jquery.tubular.1.0.js"></script>
 </body>
 </html>
