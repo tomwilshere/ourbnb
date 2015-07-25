@@ -2,9 +2,9 @@
 <div class="container">
 <h1>Places to visit in Snowdonia</h1>
 <div class="row">
-<% @properties.each do |property| %>
-  <div class="col s4">
-    <div class="card">
+<% @properties.shuffle.each do |property| %>
+  <div class="col s12 m4 ">
+    <div class="card medium hoverable">
       <div class="card-image">
         <img src="<%= property.image_urls.split('|||')[0] %>">
         <span class="card-title"><%= property.name %></span>
@@ -13,33 +13,13 @@
         <p><%= property.description %></p>
       </div>
       <div class="card-action">
-        <%= link_to 'View', property %>
+        <div class="left"><%= link_to 'View', property %></div>
+        <div class="right"><%= link_to 'Book - £' + property.price_per_night.to_s.split('.')[0] + '/night', property %>
+        </div>
       </div>
+
     </div>
   </div>
 <% end %>
 </div>
-
-  <tbody>
-    <% @properties.each do |property| %>
-      <tr>
-        <td><%= property.name %></td>
-        <td><%= property.description %></td>
-        <td><%= property.lat %></td>
-        <td><%= property.lon %></td>
-        <td><%= property.image_urls %></td>
-        <td><%= property.price_per_night %></td>
-        <td><%= property.terms %></td>
-        <td><%= property.user %></td>
-        <td><%= property.community %></td>
-        <td><%= link_to 'Show', property %></td>
-        <td><%= link_to 'Edit', edit_property_path(property) %></td>
-        <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-</div>
-<br>
-
-<%= link_to 'New Property', new_property_path %>
+<%= link_to 'Add your home', new_property_path, :class => 'btn primary' %>

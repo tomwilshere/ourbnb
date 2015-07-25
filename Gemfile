@@ -34,6 +34,9 @@ gem 'omniauth-twitter'
 # Materialize (google material design)
 gem 'materialize-sass'
 
+# Dump current database to seeds file.
+gem 'seed_dump'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

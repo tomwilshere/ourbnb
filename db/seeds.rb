@@ -1,7 +1,29 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+user = User.new
+user.email = "test@example.com"
+user.password = 'test1234'
+user.password_confirmation = 'test1234'
+user.save!
+
+Community.create!([
+  {name: "Snowdonia", description: "Snowdonia National Park", image_url: "http://www.plascochsnowdonia.co.uk/wp-content/uploads/2011/10/snowdonia2.jpg"}
+])
+Property.create!([
+  {name: "Country Farm", description: "A farm in snowdonia ", lat: "53.155740", lon: "-4.041016", image_urls: "http://www.walestouristsonline.co.uk/pictures/general/Snowdon_Cottage.jpg", price_per_night: "80.0", terms: "Don't rip me off", user_id: 1, community_id: 1},
+  {name: "Mountain Lodge", description: "Come and stay with us on the side of Snowdon and join us on a trek to the summit.", lat: "53.068520", lon: "-4.075901", image_urls: "http://media-cdn.tripadvisor.com/media/photo-s/07/0a/ff/51/snowdonia-mountain-lodge.jpg", price_per_night: "130.0", terms: "", user_id: 1, community_id: 1},
+  {name: "Forest Retreat", description: "Stay in amongst the trees at our warm and cosy home in the forests of Snowdonia.", price_per_night: "90.0", image_urls: "http://www.marvelous-homes.com/wp-content/uploads/2013/10/house_forest_2.jpg", terms: "", user_id: 1, community_id: 1},
+  {name: "Hilltop hideaway", description: "Look out over the peaks of Snowdonia and experience the fresh air Wales has to offer.", image_urls: "http://www.brendahome.com/wp-content/uploads/2014/09/traditional-small-backyard-deck-designs-veranda-design-home-decorating-colour-schemes.jpg", lat: "53.068520", lon: "-4.075901", price_per_night: "130.0", terms: "", user_id: 1, community_id: 1},
+  {name: "Heathland Cottage ", description: "Visit our home perched on the western edge of Snowdonia.", image_urls: "http://fscomps.fotosearch.com/compc/UNS/UNS062/u20824017.jpg", lat: "53.068520", lon: "-4.075901", price_per_night: "130.0", terms: "", user_id: 1, community_id: 1},
+  {name: "Traditional Log Cabin", description: "Our traditional log cabin offers a cosy welcome to hill climbers in Snowdonia", image_urls: "http://www.cnbhomes.com/wp-content/uploads/2015/02/chic-birch-meadow-luxury-log-cabins-CbVs5.jpg", lat: "53.068520", lon: "-4.075901", price_per_night: "130.0", terms: "", user_id: 1, community_id: 1},
+  {name: "Country Farm", description: "A farm in snowdonia ", lat: "53.155740", lon: "-4.041016", image_urls: "http://www.walestouristsonline.co.uk/pictures/general/Snowdon_Cottage.jpg", price_per_night: "80.0", terms: "Don't rip me off", user_id: 1, community_id: 1},
+  {name: "Mountain Lodge", description: "Come and stay with us on the side of Snowdon and join us on a trek to the summit.", lat: "53.068520", lon: "-4.075901", image_urls: "http://media-cdn.tripadvisor.com/media/photo-s/07/0a/ff/51/snowdonia-mountain-lodge.jpg", price_per_night: "130.0", terms: "", user_id: 1, community_id: 1},
+  {name: "Forest Retreat", description: "Stay in amongst the trees at our warm and cosy home in the forests of Snowdonia.", price_per_night: "90.0", image_urls: "http://www.marvelous-homes.com/wp-content/uploads/2013/10/house_forest_2.jpg", terms: "", user_id: 1, community_id: 1},
+  {name: "Hilltop hideaway", description: "Look out over the peaks of Snowdonia and experience the fresh air Wales has to offer.", image_urls: "http://www.brendahome.com/wp-content/uploads/2014/09/traditional-small-backyard-deck-designs-veranda-design-home-decorating-colour-schemes.jpg", lat: "53.068520", lon: "-4.075901", price_per_night: "130.0", terms: "", user_id: 1, community_id: 1},
+  {name: "Heathland Cottage ", description: "Visit our home perched on the western edge of Snowdonia.", image_urls: "http://fscomps.fotosearch.com/compc/UNS/UNS062/u20824017.jpg", lat: "53.068520", lon: "-4.075901", price_per_night: "130.0", terms: "", user_id: 1, community_id: 1},
+  {name: "Traditional Log Cabin", description: "Our traditional log cabin offers a cosy welcome to hill climbers in Snowdonia", image_urls: "http://www.cnbhomes.com/wp-content/uploads/2015/02/chic-birch-meadow-luxury-log-cabins-CbVs5.jpg", lat: "53.068520", lon: "-4.075901", price_per_night: "130.0", terms: "", user_id: 1, community_id: 1},
+  {name: "Country Farm", description: "A farm in snowdonia ", lat: "53.155740", lon: "-4.041016", image_urls: "http://www.walestouristsonline.co.uk/pictures/general/Snowdon_Cottage.jpg", price_per_night: "80.0", terms: "Don't rip me off", user_id: 1, community_id: 1},
+  {name: "Mountain Lodge", description: "Come and stay with us on the side of Snowdon and join us on a trek to the summit.", lat: "53.068520", lon: "-4.075901", image_urls: "http://media-cdn.tripadvisor.com/media/photo-s/07/0a/ff/51/snowdonia-mountain-lodge.jpg", price_per_night: "130.0", terms: "", user_id: 1, community_id: 1},
+  {name: "Forest Retreat", description: "Stay in amongst the trees at our warm and cosy home in the forests of Snowdonia.", price_per_night: "90.0", image_urls: "http://www.marvelous-homes.com/wp-content/uploads/2013/10/house_forest_2.jpg", terms: "", user_id: 1, community_id: 1},
+  {name: "Hilltop hideaway", description: "Look out over the peaks of Snowdonia and experience the fresh air Wales has to offer.", image_urls: "http://www.brendahome.com/wp-content/uploads/2014/09/traditional-small-backyard-deck-designs-veranda-design-home-decorating-colour-schemes.jpg", lat: "53.068520", lon: "-4.075901", price_per_night: "130.0", terms: "", user_id: 1, community_id: 1},
+  {name: "Heathland Cottage ", description: "Visit our home perched on the western edge of Snowdonia.", image_urls: "http://fscomps.fotosearch.com/compc/UNS/UNS062/u20824017.jpg", lat: "53.068520", lon: "-4.075901", price_per_night: "130.0", terms: "", user_id: 1, community_id: 1},
+  {name: "Traditional Log Cabin", description: "Our traditional log cabin offers a cosy welcome to hill climbers in Snowdonia", image_urls: "http://www.cnbhomes.com/wp-content/uploads/2015/02/chic-birch-meadow-luxury-log-cabins-CbVs5.jpg", lat: "53.068520", lon: "-4.075901", price_per_night: "130.0", terms: "", user_id: 1, community_id: 1},
+])

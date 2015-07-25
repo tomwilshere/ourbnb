@@ -49,5 +49,4 @@ $('select').material_select();
 
 	widthCheck();
 
-
 });
