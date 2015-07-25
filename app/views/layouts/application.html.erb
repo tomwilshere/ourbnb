@@ -10,8 +10,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-  <body>
-    <nav class="light-blue lighten-1" role="navigation">
+  <body class="<%= page %>" id="<%= body_id %>">
+    <nav class="nav light-blue lighten-1" role="navigation">
       <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">OurBnB</a>
       <ul class="right hide-on-med-and-down">
         <li><%= link_to('Things', things_path) %></li>
