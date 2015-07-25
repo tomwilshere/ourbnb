@@ -17,7 +17,8 @@
     <nav class="nav light-blue lighten-1" role="navigation">
       <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Hearth</a>
       <ul class="right hide-on-med-and-down">
-        <li><%= link_to('Things', things_path) %></li>
+        <li><%= link_to('Places', things_path) %></li>
+        <li><%= link_to('Communitites', communities_path) %></li>
         <% if user_signed_in? %>
         <li>
           <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
@@ -25,7 +26,8 @@
         <% end %>
       </ul>
       <ul id="nav-mobile" class="side-nav">
-        <li><%= link_to('Things', things_path) %></li>
+        <li><%= link_to('Places', things_path) %></li>
+        <li><%= link_to('Communitites', communities_path) %></li>
         <% if user_signed_in? %>
         <li>
           <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
