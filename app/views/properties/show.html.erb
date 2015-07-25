@@ -1,57 +1,50 @@
 
+<div class="full-image" style="background-image: url(<%= @property.image_urls.split('|||')[0] %>);">
+  <div class="valign-wrapper">
+  <h1 class="valign"><%= @property.name %></h1>
+</div>
+</div>
 <div class="container">
-<p id="notice"><%= notice %></p>
+  <p>
+    <strong>Description:</strong>
+    <%= @property.description %>
+  </p>
 
-<div class="parallax-container">
-  <div class="parallax"><img src="<%= @property.image_urls.split('|||')[0] %>"></div>
+  <p>
+    <strong>Lat:</strong>
+    <%= @property.lat %>
+  </p>
+
+  <p>
+    <strong>Lon:</strong>
+    <%= @property.lon %>
+  </p>
+
+  <p>
+    <strong>Image urls:</strong>
+    <%= @property.image_urls %>
+  </p>
+
+  <p>
+    <strong>Price per night:</strong>
+    <%= @property.price_per_night %>
+  </p>
+
+  <p>
+    <strong>Terms:</strong>
+    <%= @property.terms %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= @property.user %>
+  </p>
+
+  <p>
+    <strong>Community:</strong>
+    <%= @property.community %>
+  </p>
+
+  <%= link_to 'Edit', edit_property_path(@property) %> |
+  <%= link_to 'Back', properties_path %>
 </div>
-
-</div>
-
-<p>
-  <strong>Name:</strong>
-  <%= @property.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @property.description %>
-</p>
-
-<p>
-  <strong>Lat:</strong>
-  <%= @property.lat %>
-</p>
-
-<p>
-  <strong>Lon:</strong>
-  <%= @property.lon %>
-</p>
-
-<p>
-  <strong>Image urls:</strong>
-  <%= @property.image_urls %>
-</p>
-
-<p>
-  <strong>Price per night:</strong>
-  <%= @property.price_per_night %>
-</p>
-
-<p>
-  <strong>Terms:</strong>
-  <%= @property.terms %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @property.user %>
-</p>
-
-<p>
-  <strong>Community:</strong>
-  <%= @property.community %>
-</p>
-
-<%= link_to 'Edit', edit_property_path(@property) %> |
-<%= link_to 'Back', properties_path %>

@@ -4,6 +4,9 @@
 body {
 
 }
+.main-text{
+	@extend .red-text, .darken-3;
+}
 nav{
 	position: fixed;
 	top: 0px;
@@ -19,26 +22,23 @@ nav{
 	background: rgba(255,255,255,0.4);
 	overflow-y: scroll;
 }
-/*.welcome-banner{
-	background-image: image_url('welcome.jpg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-}*/
+.welcome-banner{
+	padding: 10% 0;
+}
 .welcome-input{
 	float: none;
   	margin: auto;
-  	width: 50%;
+  	width: 100%;
+  	overflow: hidden;
 }
-.card-box{
-	padding: 10px;
-	background-color: #fff;
-	margin: 0 10px;
+.card-box .welcome-input{
+	padding: 20px;
+	background-color: #333;
 }
 .date{
 	font-size: 2.5em;
 	font-weight: bold;
-	color: #333;
+	color: #fff;
 }
 #manifesto{
 	width: 100%;
