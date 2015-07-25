@@ -15,19 +15,19 @@
 //= require turbolinks
 //= require_tree .
 $(document).ready(function (){
-$('.datepicker').pickadate({
-    selectMonths: true, // Creates a dropdown to control month
-    selectYears: 15 // Creates a dropdown of 15 years to control year
-  });
+	$('.datepicker').pickadate({
+	    selectMonths: true, // Creates a dropdown to control month
+	    selectYears: 15 // Creates a dropdown of 15 years to control year
+	  });
 
-$('select').material_select();
+	$('select').material_select();
 
 
-	var widthCheck = function() {
+		var widthCheck = function() {
 
-	  var $window = $(window);
-	  var w = $window.width();
-	  var h = $window.height();
+		  var $window = $(window);
+		  var w = $window.width();
+		  var h = $window.height();
 
 		  if (w <= 580) {
 
@@ -45,8 +45,9 @@ $('select').material_select();
 
 		  }
 
-	};
+		};
 
-	widthCheck();
+		widthCheck();
 
+	$('.parallax').parallax();
 });
