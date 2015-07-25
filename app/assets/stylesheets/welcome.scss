@@ -3,21 +3,30 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
 }
-.welcome-banner{
+.wrap{
+	z-index: 999;
+	  position: relative;
+}
+/*.welcome-banner{
 	background-image: image_url('welcome.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-}
+}*/
 .welcome-input{
 	float: none;
   	margin: auto;
   	width: 50%;
 }
+.card-box{
+	padding: 10px;
+	background-color: #fff;
+	margin: 0 10px;
+}
 .date{
 	font-size: 2.5em;
 	font-weight: bold;
-	color: white;
+	color: #333;
 }
 #manifesto{
 	width: 100%;
@@ -52,4 +61,3 @@ body {
    .input-field .prefix.active {
      color: #000;
    }
-  

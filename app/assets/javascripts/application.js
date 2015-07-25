@@ -38,7 +38,6 @@ $('select').material_select();
 	        var top = $('.site-header').outerHeight();
 	        var remainHeight = parseInt('22');
 	        $('.welcome-banner').css({"height": $window.height(), "width": $window.width() });
-	        $('body').css('overflow','hidden');
 
 		    // Execute on load
 		    // Bind event listener
@@ -48,5 +47,13 @@ $('select').material_select();
 	};
 
 	widthCheck();
+
+
+	var options = {  videoId: 'eTOsAJyF1jk', 
+                   start: 0, 
+                   repeat: true
+                };  
+  
+	$('body').tubular(options); 
 
 });
