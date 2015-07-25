@@ -2,11 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-	background-image: image_url('snowdonia_background.jpg');
+}
+.welcome-main{
+	background-image: image_url('welcome.jpg');
 	background-size: cover;
 	background-position: center;
 }
-
-.container {
-	background-color: rgba(255,255,255,0.6);
+.welcome-input{
+	float: none;
+  	margin: auto;
+  	width: 50%;
 }
+#manifesto{
+	width: 100%;
+	padding: 20px;
+	background-color: #333;
+}
+
