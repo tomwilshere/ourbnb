@@ -1,22 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Properties</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Lat</th>
-      <th>Lon</th>
-      <th>Image urls</th>
-      <th>Price per night</th>
-      <th>Terms</th>
-      <th>User</th>
-      <th>Community</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<h1>Places to visit in Snowdonia</h1>
+<div class="row">
+<% @properties.each do |property| %>
+  <div class="col s4">
+    <div class="card">
+      <div class="card-image">
+        <img src="<%= property.image_urls.split('|||')[0] %>">
+        <span class="card-title"><%= property.name %></span>
+      </div>
+      <div class="card-content">
+        <p><%= property.description %></p>
+      </div>
+      <div class="card-action">
+        <%= link_to 'View', property %>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>
 
   <tbody>
     <% @properties.each do |property| %>
